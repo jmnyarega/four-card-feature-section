@@ -18,8 +18,8 @@ body {
   margin: 5% auto;
 
   min-height: 100vh;
-  display: grid;
-  place-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 /* Typography */
@@ -43,7 +43,7 @@ body {
 .top-section h4,
 .top-section h3 {
   margin: 0;
-  font-size: 1.6rem;
+  font-size: 2rem;
 }
 
 .top-section p {
@@ -55,6 +55,7 @@ body {
 .card {
   padding: 0.5rem 1.5rem;
   box-shadow: 0 0 10px rgb(84 84 84 / 50%);
+  background-color: white;
   border-radius: 0.5rem;
   display: grid;
 }
@@ -74,6 +75,7 @@ body {
 
 .img {
   place-self: end;
+  padding: 1rem 0;
 }
 
 .card--supervisor {
@@ -93,10 +95,6 @@ body {
 }
 
 @media (min-width: 500px) {
-  body {
-    max-height: 100vh;
-    margin: 0 auto;
-  }
   .container {
     display: grid;
     column-gap: 2rem;
