@@ -92,7 +92,7 @@ body {
   border-top: 3px solid var(--blue);
 }
 
-@media (min-width: 400px) {
+@media (min-width: 500px) {
   body {
     max-height: 100vh;
     margin: 0 auto;
