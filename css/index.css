@@ -34,19 +34,19 @@ body {
     margin: 1rem auto 0; }
 
 .card {
-  padding: 2rem;
-  margin-top: 2rem;
+  padding: 2em;
+  margin-top: 2em;
   box-shadow: 0 0 0.625rem rgba(84, 84, 84, 0.5);
   background-color: white;
-  border-radius: 0.5rem;
+  border-radius: 0.5em;
   display: grid; }
   .card .title--dark {
     text-transform: capitalize;
-    margin-bottom: 0.5rem; }
+    margin-bottom: 0.5em; }
   .card__img {
     place-self: flex-end;
-    padding: 1rem 0;
-    margin-top: 0.5rem; }
+    padding: 1em 0;
+    margin-top: 0.5em; }
   .card--supervisor {
     border-top: 3px solid #45d3d3; }
   .card--team {
@@ -69,10 +69,10 @@ body {
 @media (min-width: 32.25em) {
   .container {
     display: grid;
-    column-gap: 2rem;
+    column-gap: 2em;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "a b c" "a d c";
-    margin-top: 2rem; }
+    margin-top: 2em; }
   .card--supervisor {
     grid-area: a;
     align-self: center; }
