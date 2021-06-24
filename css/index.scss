@@ -1,0 +1,146 @@
+$red: hsl(0, 78%, 62%);
+$cyan: hsl(180, 62%, 55%);
+$orange: hsl(34, 97%, 64%);
+$blue: hsl(212, 86%, 64%);
+$very-dark-blue: hsl(234, 12%, 34%);
+$grayish-blue: hsl(229, 6%, 66%);
+$very-light-gray: hsl(0, 0%, 98%);
+$white: white;
+$v-very-light-gray: rgba(84, 84, 84, 0.5);
+
+$base-font-size: 2.5rem;
+$base-spacing: 2rem;
+$border-radius: 0.5rem;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.25rem;
+  font-family: "Poppins", sans-serif;
+  background-color: $very-light-gray;
+  color: $grayish-blue;
+
+  max-width: 90rem;
+  min-height: 100vh;
+  width: 80%;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: $base-font-size;
+
+  &--light {
+    font-size: $base-font-size + 0.4rem;
+    font-weight: 200;
+  }
+
+  &--dark {
+    font-weight: 600;
+    color: $very-dark-blue;
+  }
+}
+
+.top-section {
+  text-align: center;
+
+  &__text {
+    max-width: 50ch;
+    margin: 1rem auto 0;
+  }
+}
+
+.card {
+  padding: $base-spacing;
+  margin-top: $base-spacing;
+
+  box-shadow: 0 0 0.625rem $v-very-light-gray;
+  background-color: $white;
+  border-radius: $border-radius;
+
+  display: grid;
+
+  .title--dark {
+    text-transform: capitalize;
+    margin-bottom: $border-radius;
+  }
+
+  &__img {
+    place-self: flex-end;
+    padding: $base-spacing / 2 0;
+    margin-top: $border-radius;
+  }
+
+  &--supervisor {
+    border-top: 3px solid $cyan;
+  }
+
+  &--team {
+    border-top: 3px solid $red;
+  }
+
+  &--karma {
+    border-top: 3px solid $orange;
+  }
+
+  &--calculator {
+    border-top: 3px solid $blue;
+  }
+
+  &:hover {
+    animation: shake 0.5s ease-in-out;
+
+    @keyframes shake {
+      0% {
+        transform: rotate(0);
+      }
+
+      50% {
+        transform: rotate(2deg);
+      }
+
+      100% {
+        transform: rotate(0);
+      }
+
+    }
+  }
+}
+
+@media (min-width: 32.25em) {
+  .container {
+    display: grid;
+    column-gap: $base-spacing;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "a b c" "a d c";
+
+    margin-top: $base-spacing;
+  }
+
+  .card--supervisor {
+    grid-area: a;
+    align-self: center;
+  }
+
+  .card--team {
+    grid-area: b;
+  }
+
+  .card--calculator {
+    grid-area: c;
+    align-self: center;
+  }
+
+  .card--karma {
+    grid-area: d;
+  }
+}
